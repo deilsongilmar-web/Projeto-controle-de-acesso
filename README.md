@@ -1,6 +1,6 @@
 
 # 👁️ Controle de Acesso Facial (FaceCheck)
-
+![Image](https://github.com/user-attachments/assets/5a89f835-5187-4976-b361-e5062ef2ab03)
 Este é um projeto simples de Controle de Acesso de Funcionários que utiliza **Reconhecimento Facial** diretamente no navegador.
 
 Desenvolvido com **HTML**, **Tailwind CSS** e **JavaScript**, utilizando a biblioteca **face-api.js** (baseada em TensorFlow.js) para processamento biométrico.
