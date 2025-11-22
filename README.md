@@ -1,15 +1,20 @@
 
 # 👁️ Controle de Acesso Facial (FaceCheck)
 ![Image](https://github.com/user-attachments/assets/5a89f835-5187-4976-b361-e5062ef2ab03)
-Este é um projeto simples de Controle de Acesso de Funcionários que utiliza **Reconhecimento Facial** diretamente no navegador.
+
+
+## 👤 Desenvolvido por Deilson Gilmar
+Este é um projeto simples de Controle de Acesso de Funcionários que utiliza **Reconhecimento Facial** diretamente no navegador, desenvolvido como parte do portfólio de projetos web em **DeilsonGilmar-web**.
 
 Desenvolvido com **HTML**, **Tailwind CSS** e **JavaScript**, utilizando a biblioteca **face-api.js** (baseada em TensorFlow.js) para processamento biométrico.
+
+---
 
 ## 🚀 Funcionalidades
 
 * **Captura de Vídeo:** Acessa a webcam do usuário para stream de vídeo em tempo real.
 * **Deteção Facial:** Identifica a posição de rostos no stream.
-* **Registro (Enroll):** Permite cadastrar um novo funcionário, capturando um *descritor facial* e associando a um nome.
+* **Registro (Enroll):** Permite cadastrar um novo funcionário, capturando um *descritor facial* e associando a um nome. Os dados são salvos na memória temporária do navegador.
 * **Autenticação (Check-in):** Compara o rosto atual com os descritores faciais cadastrados, realizando o reconhecimento.
 * **Estilização Moderna:** Utiliza **Tailwind CSS** para um layout limpo e responsivo.
 
@@ -22,6 +27,8 @@ Desenvolvido com **HTML**, **Tailwind CSS** e **JavaScript**, utilizando a bibli
 | **JavaScript (ES6+)** | Lógica da aplicação, controle da câmera e interação com a biblioteca de ML. |
 | **face-api.js** | Biblioteca JavaScript para Detecção e Reconhecimento Facial (utiliza modelos do TensorFlow.js). |
 
+---
+
 ## ⚙️ Como Executar o Projeto
 
 Como este projeto carrega modelos de Machine Learning localmente (`/models`), ele **não pode ser executado diretamente abrindo o `index.html`** no navegador por motivos de segurança (*CORS/Same-Origin Policy*).
@@ -30,8 +37,8 @@ Você precisa de um **servidor local** para que os arquivos sejam carregados cor
 
 ### Pré-requisitos
 
-1.  **Baixar os Modelos:** Você precisa obter os arquivos de modelos da biblioteca `face-api.js` e colocá-los na pasta `models/` na raiz do projeto.
-    * Recomendado: Baixe o zip dos modelos do GitHub oficial do **face-api.js** e use os arquivos: `tiny_face_detector_model`, `face_landmark_68_model`, `face_recognition_model` e `face_expression_model`.
+1.  **Baixar os Modelos:** É crucial obter os arquivos de modelos da biblioteca `face-api.js` e colocá-los na pasta `models/` na raiz do projeto.
+    * **Instrução:** Baixe os modelos do repositório oficial do **face-api.js** e inclua os arquivos `.json` e `.weights` de: `tiny_face_detector_model`, `face_landmark_68_model`, `face_recognition_model` e `face_expression_model`.
 2.  **Instalar um Servidor Local:**
 
 ### Opção 1: Extensão Live Server (VS Code)
@@ -58,22 +65,19 @@ Se você tem o Node.js instalado:
 
 ## 🤝 Uso
 
-1.  **Registro (Enroll):** Clique em **"Registrar Novo Funcionário"**. Olhe para a câmera e digite o nome do funcionário quando solicitado. Isso armazena o *descritor facial* no array `registeredFaces` (apenas na memória do navegador).
-2.  **Autenticação (Check-in):** Clique em **"Autenticar"**. O sistema entrará em loop, detectando e tentando reconhecer o rosto. O nome do funcionário cadastrado aparecerá na tela se a similaridade for alta o suficiente.
+1.  **Registro (Enroll):** Clique em **"Registrar Novo Funcionário"**. Olhe para a câmera e digite o nome do funcionário quando solicitado.
+2.  **Autenticação (Check-in):** Clique em **"Autenticar"**. O sistema tentará reconhecer seu rosto com os dados cadastrados.
 
 ---
 
-## 💡 Próximos Passos e Melhorias
+## 📞 Contato e Portfólio
 
-* **Persistência de Dados:** Atualmente, os cadastros são perdidos ao recarregar a página. Implementar **LocalStorage**, **IndexedDB** ou uma API *backend* para armazenar os descritores faciais de forma permanente.
-* **Interface de Usuário (UI):** Melhorar a interface para listar os funcionários cadastrados.
-* **Segurança:** Implementar uma etapa de PIN ou senha antes de registrar novos rostos.
+Este projeto faz parte do portfólio de **Deilson Gilmar**.
+
+* **GitHub:** [https://github.com/DeilsonGilmar-web](https://github.com/DeilsonGilmar-web)
+* **Email:** [deilsongilmar@gmail.com](deilsongilmar@gmail.com)
+* **LinkedIn:** [https://www.linkedin.com/in/deilson-mendes/](https://www.linkedin.com/in/deilson-mendes/).
+
+Ficarei feliz em receber feedback ou discutir outras ideias de projetos!
 
 ---
-
-Este vídeo do YouTube demonstra o reconhecimento facial utilizando JavaScript e a biblioteca `face-api.js`, que é a base da solução proposta para o seu controle de acesso.
-
-[Criando Detecção Facial com JavaScript e Face-api.js](https://www.youtube.com/watch?v=tF36BEoQcyo)
-
-
-http://googleusercontent.com/youtube_content/0
