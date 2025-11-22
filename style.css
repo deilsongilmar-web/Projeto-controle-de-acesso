@@ -1,0 +1,11 @@
+#videoElement {
+    transform: scaleX(-1); /* Espelhar a câmera para uma experiência mais natural */
+}
+
+#canvasOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Certifique-se de que o canvas esteja espelhado também */
+    transform: scaleX(-1);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Acesso Facial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md text-center">
+        <h1 class="text-3xl font-bold mb-6 text-indigo-700">Acesso Facial 👁️</h1>
+
+        <div class="relative mb-6">
+            <video id="videoElement" autoplay muted class="rounded-lg w-full h-auto border-4 border-indigo-300"></video>
+            <canvas id="canvasOverlay" class="absolute top-0 left-0"></canvas>
+        </div>
+
+        <p id="statusMessage" class="text-lg font-medium text-gray-700 h-6">Aguardando câmera...</p>
+        
+        <div class="mt-8 space-y-4">
+            <button id="enrollButton" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-md">
+                Registrar Novo Funcionário (Enroll)
+            </button>
+            <button id="authButton" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors shadow-md">
+                Autenticar (Check-in)
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
