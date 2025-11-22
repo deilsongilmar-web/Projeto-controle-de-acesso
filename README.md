@@ -1,5 +1,4 @@
-# Projeto-controle-de-acesso
-Acesso de Funcionários , controle facial
+
 # 👁️ Controle de Acesso Facial (FaceCheck)
 
 Este é um projeto simples de Controle de Acesso de Funcionários que utiliza **Reconhecimento Facial** diretamente no navegador.
